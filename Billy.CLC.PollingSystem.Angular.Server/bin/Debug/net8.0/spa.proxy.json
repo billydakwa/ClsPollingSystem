@@ -1,0 +1,10 @@
+{
+"SpaProxyServer": {
+"ServerUrl": "https://localhost:4200",
+"RedirectUrl": "",
+"LaunchCommand": "npm start",
+"WorkingDirectory": "C:\\Users\\Billy\\source\\repos\\Billy.CLC.PollingSystem.Angular\\Billy.CLC.PollingSystem.Angular.Server\\..\\billy.clc.pollingsystem.angular.client",
+"MaxTimeoutInSeconds": "120",
+"KeepRunning": "false"
+}
+}

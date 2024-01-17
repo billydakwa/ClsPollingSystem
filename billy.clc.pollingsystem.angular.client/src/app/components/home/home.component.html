@@ -1,0 +1,27 @@
+<div class="outer-p">
+    <h3>Current Polls</h3>
+    <ul class="list-group">
+        <li *ngFor="let poll of polls;let i=index" class="list-group-item">
+            <div class="row">
+                <div class="col-sm-7 li-name">
+                    {{i+1}}.
+                    {{poll.pollname}}
+                </div>
+                <div class="col-sm-5">
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <button class="btn btn-success" [routerLink]="['/vote',poll.id,user]">
+                                Vote
+                            </button>
+                        </div>
+                        <div class="col-sm-6">
+                            <button class="btn btn-primary" [routerLink]="['/results',poll.id]">
+                                View results
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </li>
+    </ul>
+</div>

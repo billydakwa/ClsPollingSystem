@@ -1,0 +1,1 @@
+C:\Users\Billy\source\repos\Billy.CLC.PollingSystem.Angular\billy.clc.pollingsystem.angular.client\obj\Debug\billy.clc.pollingsystem.angular.client.esproj.CoreCompileInputs.cache

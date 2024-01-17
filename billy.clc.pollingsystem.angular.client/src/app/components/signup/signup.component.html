@@ -1,0 +1,101 @@
+<div class="outer">
+    <div class="container">
+        <div class="row">
+            <div class="offset-md2 col-lg-5 colmd-7 offset-lg-4 offset-md-3">
+                <div class="panel border bg-white">
+                    <div class="panel-heading">
+                        <h3 class="pt-3 font-weight-bold">Sign up</h3>
+                    </div>
+                    <div class="panel-body p-3">
+                        <form [formGroup]="signUpForm">
+                            <div class="form-group pt-3">
+                                <div class="input-group mb-3"
+                                    [class.error]="signUpForm.controls['firstname'].dirty && signUpForm.hasError('required','firstname')">
+                                    <input formControlName="firstname" type="text" class="form-control"
+                                        placeholder="Firstname" />
+                                </div>
+                            </div>
+                            <small
+                                *ngIf="signUpForm.controls['firstname'].dirty && signUpForm.hasError('required','firstname')"
+                                class="text-danger">Firstname required!</small>
+                            <div class="form-group pt-3">
+                                <div class="input-group mb-3"
+                                    [class.error]="signUpForm.controls['lastname'].dirty && signUpForm.hasError('required','lastname')">
+                                    <input formControlName="lastname" type="text" class="form-control"
+                                        placeholder="Lastname" />
+                                </div>
+                            </div>
+                            <small
+                                *ngIf="signUpForm.controls['lastname'].dirty && signUpForm.hasError('required','lastname')"
+                                class="text-danger">Lastname required!</small>
+                            <div class="form-group pt-3">
+                                <div class="input-group mb-3"
+                                    [class.error]="signUpForm.controls['email'].dirty && signUpForm.hasError('required','email')">
+                                    <span class="input-group-text fa fa-envelope p-2"></span>
+                                    <input formControlName="email" type="text" class="form-control"
+                                        placeholder="Email" />
+                                </div>
+                            </div>
+                            <small *ngIf="signUpForm.controls['email'].dirty && signUpForm.hasError('required','email')"
+                                class="text-danger">Email required!</small>
+                            <div class="form-group pt-3">
+                                <div class="input-group mb-3"
+                                    [class.error]="signUpForm.controls['username'].dirty && signUpForm.hasError('required','username')">
+                                    <span class="input-group-text fa fa-user p-2"></span>
+                                    <input formControlName="username" type="text" class="form-control"
+                                        placeholder="Username" />
+                                </div>
+                            </div>
+                            <div class="form-group pt-3">
+                                <div class="input-group mb-3"
+                                    [class.error]="signUpForm.controls['password'].dirty && signUpForm.hasError('required','password')">
+                                    <span class="input-group-text fa fa-lock p-2"></span>
+                                    <input formControlName="password" [type]="passType" class="form-control"
+                                        placeholder="Password" />
+                                    <span id="passIcon" (click)="hideShowPassword()"
+                                        class="input-group-text fa {{passIcon}}"></span>
+                                </div>
+                            </div>
+                            <small
+                                *ngIf="signUpForm.controls['password'].dirty && signUpForm.hasError('required','password')"
+                                class="text-danger">Password required!</small>
+                            <div class="form-group pt-3">
+                                <div class="input-group mb-3"
+                                    [class.error]="signUpForm.controls['conPassword'].dirty && signUpForm.hasError('required','conPassword')">
+                                    <span class="input-group-text fa fa-lock p-2"></span>
+                                    <input formControlName="conPassword" [type]="passType" class="form-control"
+                                        placeholder="Confirm password" />
+                                    <span id="conPassIcon" (click)="hideShowPassword()"
+                                        class="input-group-text fa {{passIcon}}"></span>
+                                </div>
+                            </div>
+                            <small
+                                *ngIf="signUpForm.controls['conPassword'].dirty && signUpForm.hasError('required','conPassword')"
+                                class="text-danger">Please confirm your password!</small>
+
+                            <button (click)="onSubmit()" type="submit" class="btn btn-primary btn-block mt-4 w-100">
+                                Sign up
+                            </button>
+                            <div class="text-center pt-4 text-muted">
+                                Already have an account?
+                                <a id="signin" [routerLink]="['/login']" routerLinkActive="router-link-active">Login</a>
+                            </div>
+                        </form>
+                    </div>
+                    <!-- <div class="mx-3 my-2 py-2 bordert">
+                        <div class="text-center py-3">
+                            <a href="https://www.facebook.com" target="_blank" class="px-2"><img
+                                    src="https://www.dpreview.com/files/p/articles/4698742202/facebook.jpeg" alt=""></a>
+                            <a href="https://www.google.com" target="_blank" class="px-2"> <img
+                                    src="https://www.freepnglogos.com//uploads/google-logo-png/google-logo-png-google-icon-logo-png-transparent-svg-vector-bie-supply-14.png"
+                                    alt=""></a>
+                            <a href="https://www.github.com" target="_blank" class="px-2"> <img
+                                    src="https://www.freepnglogos.com/uploads/512x512-logo-png/512x512-logo-github-icon-35.png"
+                                    alt=""></a>
+                        </div>
+                    </div> -->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

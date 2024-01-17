@@ -1,0 +1,65 @@
+<div class="outer">
+    <div class="container">
+        <div class="row">
+            <div class="offset-md2 col-lg-5 colmd-7 offset-lg-4 offset-md-3">
+                <div class="panel border bg-white">
+                    <div class="panel-heading">
+                        <h3 class="pt-3 font-weight-bold">Login</h3>
+                    </div>
+                    <div class="panel-body p-3">
+                        <form [formGroup]="loginForm">
+                            <div class="form-group pt-3">
+                                <div class="input-group mb-3"
+                                    [class.error]="loginForm.controls['username'].dirty && loginForm.hasError('required','username')">
+                                    <span class="input-group-text fa fa-user p-2"></span>
+                                    <input formControlName="username" type="text" class="form-control"
+                                        placeholder="Username" />
+                                </div>
+                            </div>
+                            <small
+                                *ngIf="loginForm.controls['username'].dirty && loginForm.hasError('required','username')"
+                                class="text-danger">Username required!</small>
+                            <div class="form-group pt-3">
+                                <div class="input-group mb-3"
+                                    [class.error]="loginForm.controls['password'].dirty && loginForm.hasError('required','password')">
+                                    <span class="input-group-text fa fa-lock p-2"></span>
+                                    <input formControlName="password" [type]="passType" class="form-control"
+                                        placeholder="Password" />
+                                    <span id="passIcon" (click)="hideShowPassword()"
+                                        class="input-group-text fa {{passIcon}}"></span>
+                                </div>
+                            </div>
+                            <small
+                                *ngIf="loginForm.controls['password'].dirty && loginForm.hasError('required','password')"
+                                class="text-danger">Password required!</small>
+                            <div class="form-inline fr mt-4">
+                                <a id="forgot" class="font-weight-bold">Forgot password?</a>
+                            </div>
+                            <button (click)="onSubmit()" [class.error]="" type="submit"
+                                class="btn btn-primary btn-block mt-4 w-100">
+                                Login
+                            </button>
+                            <div class="text-center pt-4 text-muted">
+                                Don't have an account?
+                                <a id="signup" [routerLink]="['/signup']" routerLinkActive="router-link-active">Sign
+                                    up</a>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="mx-3 my-2 py-2 bordert">
+                        <div class="text-center py-3">
+                            <a href="https://www.facebook.com" target="_blank" class="px-2"><img
+                                    src="https://www.dpreview.com/files/p/articles/4698742202/facebook.jpeg" alt=""></a>
+                            <a href="https://www.google.com" target="_blank" class="px-2"> <img
+                                    src="https://www.freepnglogos.com//uploads/google-logo-png/google-logo-png-google-icon-logo-png-transparent-svg-vector-bie-supply-14.png"
+                                    alt=""></a>
+                            <a href="https://www.github.com" target="_blank" class="px-2"> <img
+                                    src="https://www.freepnglogos.com/uploads/512x512-logo-png/512x512-logo-github-icon-35.png"
+                                    alt=""></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

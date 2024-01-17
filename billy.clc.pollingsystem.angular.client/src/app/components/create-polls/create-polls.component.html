@@ -1,0 +1,59 @@
+<div class="outer-p">
+    <div class="header">
+        <h3 class="pt-3 font-weight-bold">Create New Poll</h3>
+    </div>
+    <div class="main">
+        <form [formGroup]="pollForm">
+            <div class="row">
+                <div class="col-sm-6">
+                    <h4>Details</h4>
+                    <div class="row">
+                        <div class="input-group mb-3"
+                            [class.error]="pollForm.controls['pollname'].dirty && pollForm.hasError('required','pollname')">
+                            <span class="input-group-text">Poll name</span>
+                            <input type="text" formControlName="pollname" class="form-control" placeholder="Poll name">
+                        </div>
+                        <small *ngIf="pollForm.controls['pollname'].dirty && pollForm.hasError('required','pollname')"
+                            class="text-danger">Poll name required!</small>
+                    </div>
+                    <div class="row">
+                        <div class="input-group mb-3"
+                            [class.error]="pollForm.controls['question'].dirty && pollForm.hasError('required','question')">
+                            <span class="input-group-text">Poll question</span>
+                            <textarea type="text" formControlName="question" class="form-control"
+                                placeholder="Poll name"></textarea>
+                        </div>
+                        <small *ngIf="pollForm.controls['question'].dirty && pollForm.hasError('required','question')"
+                            class="text-danger">Question required!</small>
+                    </div>
+                </div>
+
+                <div class="col-sm-6">
+                    <h4>Options</h4>
+                    <div class="input-group mb-3"
+                        [class.error]="pollForm.controls['option1'].dirty && pollForm.hasError('required','option1')">
+                        <span class="input-group-text">Option 1</span>
+                        <input type="text" formControlName="option1" class="form-control" placeholder="Option 1">
+                    </div>
+                    <small *ngIf="pollForm.controls['option1'].dirty && pollForm.hasError('required','option1')"
+                        class="text-danger">Option required!</small>
+                    <div class="input-group mb-3"
+                        [class.error]="pollForm.controls['option2'].dirty && pollForm.hasError('required','option2')">
+                        <span class="input-group-text">Option 2</span>
+                        <input type="text" formControlName="option2" class="form-control" placeholder="Option 2">
+                    </div>
+                    <small *ngIf="pollForm.controls['option2'].dirty && pollForm.hasError('required','option2')"
+                        class="text-danger">Option required!</small>
+                    <div class="input-group mb-3"
+                        [class.error]="pollForm.controls['option3'].dirty && pollForm.hasError('required','option3')">
+                        <span class="input-group-text">Option 3</span>
+                        <input type="text" formControlName="option3" class="form-control" placeholder="Option 3">
+                    </div>
+                    <small *ngIf="pollForm.controls['option3'].dirty && pollForm.hasError('required','option3')"
+                        class="text-danger">Option required!</small>
+                </div>
+            </div>
+            <button type="submit" (click)="savePoll()" class="btn btn-primary">Save poll</button>
+        </form>
+    </div>
+</div>

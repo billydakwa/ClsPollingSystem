@@ -1,0 +1,33 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34309.116
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Billy.CLC.PollingSystem.Angular.Server", "Billy.CLC.PollingSystem.Angular.Server\Billy.CLC.PollingSystem.Angular.Server.csproj", "{8A59F1AB-1EAD-4E4A-8731-F4CF3707ED6B}"
+EndProject
+Project("{54A90642-561A-4BB1-A94E-469ADEE60C69}") = "billy.clc.pollingsystem.angular.client", "billy.clc.pollingsystem.angular.client\billy.clc.pollingsystem.angular.client.esproj", "{D1A9385F-3952-4EBA-B3EC-3098DB311B3E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8A59F1AB-1EAD-4E4A-8731-F4CF3707ED6B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8A59F1AB-1EAD-4E4A-8731-F4CF3707ED6B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8A59F1AB-1EAD-4E4A-8731-F4CF3707ED6B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8A59F1AB-1EAD-4E4A-8731-F4CF3707ED6B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D1A9385F-3952-4EBA-B3EC-3098DB311B3E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D1A9385F-3952-4EBA-B3EC-3098DB311B3E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D1A9385F-3952-4EBA-B3EC-3098DB311B3E}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{D1A9385F-3952-4EBA-B3EC-3098DB311B3E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D1A9385F-3952-4EBA-B3EC-3098DB311B3E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D1A9385F-3952-4EBA-B3EC-3098DB311B3E}.Release|Any CPU.Deploy.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D172B0FC-3591-4915-84B1-D7EDA26848AC}
+	EndGlobalSection
+EndGlobal
